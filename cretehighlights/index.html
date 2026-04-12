@@ -2,50 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-      <title>Crete Highlights</title>
-        <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+  <meta name="viewport" content="width=device-width">
+  <title>Crete Interactive Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="addTabFocus()">
 
-          <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-            <header class="hero">
-                <nav class="nav">
-                      <ul>
-                              <li><a href="index.html">Home</a></li>
-                                      <li><a href="beaches.html">Beaches</a></li>
-                                              <li><a href="culture.html">Culture & Nature</a></li>
-                                                    </ul>
-                                                        </nav>
+  <header class="hero">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="beaches.html">Beaches</a></li>
+        <li><a href="culture.html">Culture & Nature</a></li>
+      </ul>
+    </nav>
 
-                                                            <h1>Crete Highlights</h1>
-                                                                <p class="intro">
-                                                                      Crete is an island of beaches, mountains, history, and small villages.
-                                                                            This mini site shares a few of the highlights that make Crete special.
-                                                                                </p>
-                                                                                  </header>
+    <h1>Crete Interactive Gallery</h1>
+    <p class="intro">
+      Hover over or focus on an image to display it in the preview area.
+    </p>
+  </header>
 
-                                                                                    <main id="main-content">
-                                                                                        <section>
-                                                                                              <h2>Why Visit Crete?</h2>
-                                                                                                    <p>
-                                                                                                            Crete offers something for everyone: turquoise beaches, dramatic gorges,
-                                                                                                                    Minoan history, mountain villages, and unforgettable views.
-                                                                                                                          </p>
-                                                                                                                              </section>
+  <main id="main-content">
+    <div id="image">
+      Hover over an image below to display here.
+    </div>
 
-                                                                                                                                  <section class="grid gallery">
-                                                                                                                                        <img src="images/crete-home-1.jpg" alt="A beautiful beach view in Crete">
-                                                                                                                                              <img src="images/crete-home-2.jpg" alt="A mountain landscape in Crete">
-                                                                                                                                                    <img src="images/crete-home-3.jpg" alt="Traditional architecture in Crete">
-                                                                                                                                                          <img src="images/crete-home-4.jpg" alt="A scenic sea view on the island of Crete">
-                                                                                                                                                              </section>
-                                                                                                                                                                </main>
+    <section class="grid gallery">
+      <img class="preview"
+           src="images/crete-home-1.jpg"
+           alt="A beautiful beach view in Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
 
-                                                                                                                                                                  <footer>
-                                                                                                                                                                      <p>Crete Highlights project</p>
-                                                                                                                                                                        </footer>
+      <img class="preview"
+           src="images/crete-home-2.jpg"
+           alt="A mountain landscape in Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
 
-                                                                                                                                                                        </body>
-                                                                                                                                                                        </html>
+      <img class="preview"
+           src="images/crete-home-3.jpg"
+           alt="Traditional architecture in Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
+
+      <img class="preview"
+           src="images/crete-home-4.jpg"
+           alt="A scenic sea view on the island of Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
+
+      <img class="preview"
+           src="images/balos.jpg"
+           alt="Balos lagoon with turquoise water in Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
+
+      <img class="preview"
+           src="images/knossos.jpg"
+           alt="The historic ruins of Knossos in Crete"
+           onmouseover="upDate(this)"
+           onmouseleave="unDo()"
+           onfocus="upDate(this)"
+           onblur="unDo()">
+    </section>
+  </main>
+
+  <footer>
+    <p>Crete Highlights project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
